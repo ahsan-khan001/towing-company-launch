@@ -9,8 +9,11 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Truck className="h-8 w-8 text-primary" />
-            <span className="font-display text-2xl tracking-wider text-foreground">RAPID TOW</span>
+            <div className="relative">
+              <Truck className="h-8 w-8 text-primary" />
+              <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-primary rounded-full border-2 border-background" />
+            </div>
+            <span className="font-display text-2xl tracking-wider text-foreground">TOWONTRUCK</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
@@ -19,7 +22,7 @@ const Index = () => {
           </div>
           <Button variant="hero" size="lg" className="hidden sm:flex">
             <Phone className="h-5 w-5" />
-            (555) 123-4567
+            289700289
           </Button>
         </div>
       </nav>
@@ -53,7 +56,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="xl">
                 <Phone className="h-5 w-5" />
-                Call Now: (555) 123-4567
+                Call Now: 289700289
               </Button>
               <Button variant="heroOutline" size="xl">
                 Request Service
@@ -69,7 +72,7 @@ const Index = () => {
               {[
                 { icon: Clock, label: "30 Min Response" },
                 { icon: Shield, label: "Fully Insured" },
-                { icon: MapPin, label: "50 Mile Radius" },
+                { icon: MapPin, label: "Hamilton, Ontario" },
                 { icon: Zap, label: "24/7 Available" },
               ].map((item, index) => (
                 <div 
@@ -154,7 +157,7 @@ const Index = () => {
                 <span className="text-gradient">THOUSANDS</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                With over 15 years of experience serving our community, Rapid Tow has built a reputation 
+                With over 15 years of experience serving Hamilton and the Greater Ontario area, TowOnTruck has built a reputation 
                 for fast, professional, and reliable service. Our fully trained operators and modern fleet 
                 ensure your vehicle is in the best hands.
               </p>
@@ -209,7 +212,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl">
                 <Phone className="h-5 w-5" />
-                (555) 123-4567
+                289700289
               </Button>
               <Button variant="heroOutline" size="xl">
                 Get Free Quote
@@ -231,8 +234,8 @@ const Index = () => {
               
               <div className="space-y-6">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(555) 123-4567" },
-                  { icon: MapPin, label: "Service Area", value: "Greater Metro Area & 50 Mile Radius" },
+                  { icon: Phone, label: "Emergency Line", value: "289700289" },
+                  { icon: MapPin, label: "Service Area", value: "Hamilton, Ontario & Surrounding Areas" },
                   { icon: Clock, label: "Hours", value: "24/7 - Always Available" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -300,11 +303,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <Truck className="h-6 w-6 text-primary" />
-              <span className="font-display text-xl tracking-wider text-foreground">RAPID TOW</span>
+              <div className="relative">
+                <Truck className="h-6 w-6 text-primary" />
+                <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-primary rounded-full border border-background" />
+              </div>
+              <span className="font-display text-xl tracking-wider text-foreground">TOWONTRUCK</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              © 2024 Rapid Tow. All rights reserved. Licensed & Insured.
+              © 2024 TowOnTruck. All rights reserved. Licensed & Insured.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Privacy</a>
