@@ -86,14 +86,14 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24 pb-8">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
           <div className="max-w-3xl animate-slide-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
@@ -111,7 +111,7 @@ const Index = () => {
               competitive rates, and service you can trust.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a href="tel:2897002089">
                 <Button variant="hero" size="xl" className="w-full sm:w-auto">
                   <Phone className="h-5 w-5" />
@@ -128,7 +128,7 @@ const Index = () => {
         </div>
         
         {/* Trust Badges */}
-        <div className="absolute bottom-8 left-0 right-0">
+        <div className="relative z-10">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
