@@ -91,7 +91,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl animate-slide-up">
