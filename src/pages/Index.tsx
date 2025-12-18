@@ -100,15 +100,13 @@ const Index = () => {
               <span className="text-primary text-sm font-medium">24/7 Emergency Service</span>
             </div>
             
-            <div className="inline-block p-4 md:p-6 rounded-xl border-2 border-primary bg-card/80 backdrop-blur-sm mb-6 shadow-glow">
-              <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-foreground leading-tight font-bold">
-                Fast, Reliable<br />
-                <span className="text-gradient">Towing Services</span><br />
-                in Hamilton
-              </h1>
-            </div>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-foreground leading-tight mb-6 font-bold [text-shadow:_-2px_-2px_0_hsl(var(--primary)),_2px_-2px_0_hsl(var(--primary)),_-2px_2px_0_hsl(var(--primary)),_2px_2px_0_hsl(var(--primary))]">
+              Fast, Reliable<br />
+              <span className="text-gradient">Towing Services</span><br />
+              in Hamilton
+            </h1>
             
-            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-xl font-medium bg-card/90 backdrop-blur-sm p-4 rounded-lg border border-border shadow-lg">
+            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-xl font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
               Professional 24/7 towing and roadside assistance. Quick response times, 
               competitive rates, and service you can trust.
             </p>
