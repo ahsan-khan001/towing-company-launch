@@ -102,7 +102,7 @@ const Index = () => {
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-foreground leading-tight mb-6 font-bold [text-shadow:_-2px_-2px_0_hsl(var(--primary)),_2px_-2px_0_hsl(var(--primary)),_-2px_2px_0_hsl(var(--primary)),_2px_2px_0_hsl(var(--primary))]">
               Fast, Reliable<br />
-              <span className="text-gradient">Towing Services</span><br />
+              <span className="text-gradient [text-shadow:_-2px_-2px_0_#151515,_2px_-2px_0_#151515,_-2px_2px_0_#151515,_2px_2px_0_#151515]">Towing Services</span><br />
               in Hamilton
             </h1>
             
