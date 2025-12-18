@@ -51,7 +51,7 @@ const Index = () => {
             <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">Contact</a>
           </div>
           
-          <a href="tel:2897002089" className="hidden sm:flex">
+          <a href="tel:2894891024" className="hidden sm:flex">
             <Button variant="hero" size="lg">
               <Phone className="h-5 w-5" />
               Call Now
@@ -74,10 +74,10 @@ const Index = () => {
               <a href="#gallery" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Gallery</a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>About</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              <a href="tel:2897002089" className="w-full">
+              <a href="tel:2894891024" className="w-full">
                 <Button variant="hero" size="lg" className="w-full">
                   <Phone className="h-5 w-5" />
-                  Call Now: (289) 700-2089
+                  Call Now: (289) 489-1024
                 </Button>
               </a>
             </div>
@@ -91,7 +91,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
         
         <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
           <div className="max-w-3xl animate-slide-up">
@@ -112,10 +112,10 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="tel:2897002089">
+              <a href="tel:2894891024">
                 <Button variant="hero" size="xl" className="w-full sm:w-auto">
                   <Phone className="h-5 w-5" />
-                  Call Now: (289) 700-2089
+                  Call Now: (289) 489-1024
                 </Button>
               </a>
               <a href="#services">
@@ -286,7 +286,7 @@ const Index = () => {
                 ))}
               </div>
               
-              <a href="tel:2897002089">
+              <a href="tel:2894891024">
                 <Button variant="hero" size="lg">
                   <Phone className="h-5 w-5" />
                   Get Help Now
@@ -328,13 +328,13 @@ const Index = () => {
               Don't wait on the side of the road. Call now and our dispatcher will send 
               the nearest available truck to your location immediately.
             </p>
-            <a href="tel:2897002089">
+            <a href="tel:2894891024">
               <Button variant="hero" size="xl" className="shadow-glow">
                 <Phone className="h-6 w-6" />
-                Call Now: (289) 700-2089
+                Call Now: (289) 489-1024
               </Button>
             </a>
-            <p className="mt-4 text-primary font-medium text-lg">(289) 700-2089</p>
+            <p className="mt-4 text-primary font-medium text-lg">(289) 489-1024</p>
           </div>
         </div>
       </section>
@@ -351,7 +351,7 @@ const Index = () => {
               
               <div className="space-y-6">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(289) 700-2089", href: "tel:2897002089" },
+                  { icon: Phone, label: "Emergency Line", value: "(289) 489-1024", href: "tel:2894891024" },
                   { icon: MapPin, label: "Service Area", value: "Hamilton, Ontario & Nearby Areas" },
                   { icon: Clock, label: "Hours", value: "24/7 - Always Available" },
                 ].map((item, index) => (
@@ -436,8 +436,8 @@ const Index = () => {
               <p className="text-muted-foreground text-sm font-light">
                 Service Area: Hamilton, Ontario & Surrounding Areas
               </p>
-              <a href="tel:2897002089" className="text-primary font-medium hover:underline">
-                (289) 700-2089
+              <a href="tel:2894891024" className="text-primary font-medium hover:underline">
+                (289) 489-1024
               </a>
             </div>
             <p className="text-muted-foreground text-sm font-light">
