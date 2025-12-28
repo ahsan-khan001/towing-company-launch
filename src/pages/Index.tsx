@@ -95,9 +95,9 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
           <div className="max-w-3xl animate-slide-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-              <span className="text-primary text-sm font-medium">24/7 Emergency Service</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/30 bg-foreground/10 mb-6">
+              <span className="h-2 w-2 rounded-full bg-foreground animate-pulse-glow" />
+              <span className="text-foreground text-sm font-medium">24/7 Emergency Service</span>
             </div>
             
             <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-foreground leading-tight mb-6 font-bold [text-shadow:_-2px_-2px_0_hsl(var(--primary)),_2px_-2px_0_hsl(var(--primary)),_-2px_2px_0_hsl(var(--primary)),_2px_2px_0_hsl(var(--primary))]">
