@@ -35,7 +35,11 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Sky Auto and Towing" className="h-12 md:h-14 w-auto" />
+            <img 
+              src={logo} 
+              alt="Sky Auto and Towing" 
+              className="h-12 md:h-14 w-12 md:w-14 object-contain rounded-full" 
+            />
           </div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -421,7 +425,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <Truck className="h-8 w-8 text-primary" />
+              <img 
+                src={logo} 
+                alt="Sky Auto and Towing" 
+                className="h-10 w-10 object-contain rounded-full" 
+              />
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-foreground">SkyAuto and Towing</span>
               </div>
