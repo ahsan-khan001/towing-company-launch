@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Phone, Clock, Shield, Truck, MapPin, Wrench, Car, Zap, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-truck.jpg";
+import logo from "@/assets/logo.png";
 
 const sliderImages = [
   heroImage,
@@ -34,14 +35,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative">
-              <Truck className="h-10 w-10 text-primary" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse-glow" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-xl md:text-2xl font-bold tracking-tight text-foreground">SkyAuto</span>
-              <span className="text-xs text-primary font-medium -mt-1">and Towing</span>
-            </div>
+            <img src={logo} alt="Sky Auto and Towing" className="h-12 md:h-14 w-auto" />
           </div>
           
           <div className="hidden md:flex items-center gap-8">
