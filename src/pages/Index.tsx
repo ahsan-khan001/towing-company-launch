@@ -1,18 +1,27 @@
 import { useState, useEffect } from "react";
 import { Phone, Clock, Shield, Truck, MapPin, Wrench, Car, Zap, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-truck.jpg";
 import logo from "@/assets/logo.png";
+import truck1 from "@/assets/truck-1.jpg";
+import truck2 from "@/assets/truck-2.jpg";
+import truck3 from "@/assets/truck-3.jpg";
+import truck4 from "@/assets/truck-4.jpg";
+import truck5 from "@/assets/truck-5.jpg";
+import truck6 from "@/assets/truck-6.jpg";
+import truck7 from "@/assets/truck-7.jpg";
+import truck8 from "@/assets/truck-8.jpg";
+import truck9 from "@/assets/truck-9.jpg";
 
 const sliderImages = [
-  heroImage,
-  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80",
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
-  "https://images.unsplash.com/photo-1609752879948-6d9a15d96a60?w=1920&q=80",
-  "https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?w=1920&q=80",
-  "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1920&q=80",
-  "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1920&q=80",
-  "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&q=80",
+  truck1,
+  truck2,
+  truck3,
+  truck4,
+  truck5,
+  truck6,
+  truck7,
+  truck8,
+  truck9,
 ];
 
 const Index = () => {
@@ -87,7 +96,7 @@ const Index = () => {
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24 pb-8">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${truck1})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
         
@@ -296,7 +305,7 @@ const Index = () => {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-transparent p-1">
                 <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center overflow-hidden">
                   <img 
-                    src={heroImage} 
+                    src={truck2} 
                     alt="SkyAuto and Towing truck" 
                     className="w-full h-full object-cover"
                   />
