@@ -98,7 +98,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
           style={{ backgroundImage: `url(${truck1})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-background/30" />
         
         <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
           <div className="max-w-3xl animate-slide-up">
