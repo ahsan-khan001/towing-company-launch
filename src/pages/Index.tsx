@@ -100,57 +100,46 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/30" />
         
-        <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center justify-end">
-          <div className="max-w-lg animate-slide-up bg-black/70 backdrop-blur-sm rounded-2xl p-6 md:p-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary bg-primary/20 mb-4">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-              <span className="text-white text-sm font-medium">24/7 Emergency Service</span>
-            </div>
-            
-            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary leading-tight mb-4 font-bold">
-              Fast Reliable Towing Services in Hamilton
-            </h1>
-            
-            <p className="text-base md:text-lg text-white/90 mb-6">
-              Professional 24/7 towing and roadside assistance. Quick response times, 
-              competitive rates, and service you can trust.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:2894891024">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto">
-                  <Phone className="h-5 w-5" />
-                  Call Now: (289) 489-1024
-                </Button>
-              </a>
-              <a href="#services">
-                <Button variant="heroOutline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white/10">
-                  Our Services
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
+        {/* Spacer to push content to bottom */}
+        <div className="flex-1" />
         
-        {/* Trust Badges */}
+        {/* Bottom Content Bar */}
         <div className="relative z-10">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {[
-                { icon: Clock, label: "Fast Response" },
-                { icon: Shield, label: "Fully Insured" },
-                { icon: MapPin, label: "Hamilton Area" },
-                { icon: Zap, label: "24/7 Service" },
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center gap-3 p-3 md:p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-border animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <item.icon className="h-5 w-5 md:h-6 md:w-6 text-primary shrink-0" />
-                  <span className="text-xs md:text-sm font-medium text-foreground">{item.label}</span>
+            <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-4 md:p-6 animate-slide-up">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+                {/* Left - Trust Badges */}
+                <div className="flex flex-wrap items-center gap-2 md:gap-3">
+                  {[
+                    { icon: Clock, label: "Fast Response" },
+                    { icon: Shield, label: "Fully Insured" },
+                    { icon: MapPin, label: "Hamilton" },
+                    { icon: Zap, label: "24/7 Service" },
+                  ].map((item, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <item.icon className="h-4 w-4 text-primary shrink-0" />
+                      <span className="text-xs font-medium text-white">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+                
+                {/* Right - Main Text & CTA */}
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <h1 className="font-display text-lg sm:text-xl md:text-2xl text-primary leading-tight font-bold text-center sm:text-right whitespace-nowrap">
+                    Fast Reliable Towing Services in Hamilton
+                  </h1>
+                  <a href="tel:2894891024">
+                    <Button variant="hero" size="lg" className="whitespace-nowrap">
+                      <Phone className="h-5 w-5" />
+                      Call Now
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
