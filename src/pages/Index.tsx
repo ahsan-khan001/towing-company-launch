@@ -106,10 +106,10 @@ const Index = () => {
         {/* Bottom Content Bar */}
         <div className="relative z-10">
           <div className="container mx-auto px-4">
-            <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-4 md:p-6 animate-slide-up">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-                {/* Left - Trust Badges */}
-                <div className="flex flex-wrap items-center gap-2 md:gap-3">
+            <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-3 md:p-6 animate-slide-up">
+              <div className="flex flex-col gap-3 md:gap-4">
+                {/* Top on mobile / Left on desktop - Trust Badges */}
+                <div className="grid grid-cols-4 gap-1.5 md:flex md:flex-wrap md:gap-3">
                   {[
                     { icon: Clock, label: "Fast Response" },
                     { icon: Shield, label: "Fully Insured" },
@@ -118,24 +118,24 @@ const Index = () => {
                   ].map((item, index) => (
                     <div 
                       key={index}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/20 animate-fade-in"
+                      className="flex flex-col md:flex-row items-center gap-1 md:gap-2 px-2 py-1.5 md:px-3 md:py-2 rounded-lg bg-white/10 border border-white/20 animate-fade-in"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <item.icon className="h-4 w-4 text-primary shrink-0" />
-                      <span className="text-xs font-medium text-white">{item.label}</span>
+                      <span className="text-[10px] md:text-xs font-medium text-white text-center">{item.label}</span>
                     </div>
                   ))}
                 </div>
                 
-                {/* Right - Main Text & CTA */}
-                <div className="flex flex-col sm:flex-row items-center gap-4">
-                  <h1 className="font-display text-lg sm:text-xl md:text-2xl text-primary leading-tight font-bold text-center sm:text-right whitespace-nowrap">
+                {/* Bottom on mobile / Right on desktop - Main Text & CTA */}
+                <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
+                  <h1 className="font-display text-base sm:text-lg md:text-2xl text-primary leading-tight font-bold text-center md:text-right">
                     Fast Reliable Towing Services in Hamilton
                   </h1>
-                  <a href="tel:2894891024">
-                    <Button variant="hero" size="lg" className="whitespace-nowrap">
-                      <Phone className="h-5 w-5" />
-                      Call Now
+                  <a href="tel:2894891024" className="w-full md:w-auto">
+                    <Button variant="hero" size="default" className="w-full md:w-auto whitespace-nowrap">
+                      <Phone className="h-4 w-4 md:h-5 md:w-5" />
+                      <span className="text-sm md:text-base">Call Now</span>
                     </Button>
                   </a>
                 </div>
