@@ -100,31 +100,31 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/30" />
         
-        <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
-          <div className="max-w-3xl animate-slide-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/30 bg-foreground/10 mb-6">
-              <span className="h-2 w-2 rounded-full bg-foreground animate-pulse-glow" />
-              <span className="text-foreground text-sm font-medium">24/7 Emergency Service</span>
+        <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center justify-end">
+          <div className="max-w-lg animate-slide-up bg-black/70 backdrop-blur-sm rounded-2xl p-6 md:p-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary bg-primary/20 mb-4">
+              <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
+              <span className="text-white text-sm font-medium">24/7 Emergency Service</span>
             </div>
             
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-sky-400 leading-tight mb-6 font-bold [text-shadow:_-2px_-2px_0_#151515,_2px_-2px_0_#151515,_-2px_2px_0_#151515,_2px_2px_0_#151515]">
+            <h1 className="font-display text-2xl sm:text-3xl md:text-4xl text-primary leading-tight mb-4 font-bold">
               Fast Reliable Towing Services in Hamilton
             </h1>
             
-            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-xl font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+            <p className="text-base md:text-lg text-white/90 mb-6">
               Professional 24/7 towing and roadside assistance. Quick response times, 
               competitive rates, and service you can trust.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a href="tel:2894891024">
-                <Button variant="hero" size="xl" className="w-full sm:w-auto">
+                <Button variant="hero" size="lg" className="w-full sm:w-auto">
                   <Phone className="h-5 w-5" />
                   Call Now: (289) 489-1024
                 </Button>
               </a>
               <a href="#services">
-                <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
+                <Button variant="heroOutline" size="lg" className="w-full sm:w-auto border-white text-white hover:bg-white/10">
                   Our Services
                 </Button>
               </a>
