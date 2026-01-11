@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
 import { Phone, Clock, Shield, Truck, MapPin, Wrench, Car, Zap, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
@@ -24,9 +28,44 @@ const sliderImages = [
   truck9,
 ];
 
+const serviceRequestSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  phone: z.string().trim().regex(/^\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$/, "Please enter a valid phone number"),
+  location: z.string().trim().min(5, "Location must be at least 5 characters").max(200, "Location must be less than 200 characters"),
+  service: z.string().min(1, "Please select a service").refine((val) => val !== "Select a service", "Please select a service")
+});
+
+type ServiceRequestForm = z.infer<typeof serviceRequestSchema>;
+
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ServiceRequestForm>({
+    resolver: zodResolver(serviceRequestSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      location: "",
+      service: ""
+    }
+  });
+
+  const onSubmit = async (data: ServiceRequestForm) => {
+    setIsSubmitting(true);
+    try {
+      // Simulate form submission - replace with actual API call when backend is connected
+      console.log("Form submitted:", data);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      toast.success("Service request submitted! We'll contact you shortly.");
+      form.reset();
+    } catch (error) {
+      toast.error("Failed to submit request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -370,45 +409,66 @@ const Index = () => {
             
             <div className="bg-card rounded-2xl p-6 md:p-8 border border-border">
               <h3 className="font-display text-xl md:text-2xl text-foreground mb-6 font-bold">Request Service</h3>
-              <form className="space-y-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2 font-medium">Your Name</label>
                   <input 
                     type="text" 
+                    {...form.register("name")}
                     className="w-full h-12 px-4 rounded-lg bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors"
                     placeholder="John Doe"
+                    maxLength={100}
                   />
+                  {form.formState.errors.name && (
+                    <p className="text-destructive text-sm mt-1">{form.formState.errors.name.message}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2 font-medium">Phone Number</label>
                   <input 
                     type="tel" 
+                    {...form.register("phone")}
                     className="w-full h-12 px-4 rounded-lg bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors"
                     placeholder="(555) 000-0000"
+                    maxLength={14}
                   />
+                  {form.formState.errors.phone && (
+                    <p className="text-destructive text-sm mt-1">{form.formState.errors.phone.message}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2 font-medium">Location</label>
                   <input 
                     type="text" 
+                    {...form.register("location")}
                     className="w-full h-12 px-4 rounded-lg bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors"
                     placeholder="Your current location"
+                    maxLength={200}
                   />
+                  {form.formState.errors.location && (
+                    <p className="text-destructive text-sm mt-1">{form.formState.errors.location.message}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2 font-medium">Service Needed</label>
-                  <select className="w-full h-12 px-4 rounded-lg bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors">
-                    <option>Select a service</option>
-                    <option>Towing Services</option>
-                    <option>Roadside Assistance</option>
-                    <option>Emergency Towing</option>
-                    <option>Battery Jump Start</option>
-                    <option>Tire Change</option>
-                    <option>Lockout Service</option>
+                  <select 
+                    {...form.register("service")}
+                    className="w-full h-12 px-4 rounded-lg bg-background border border-border text-foreground focus:border-primary focus:outline-none transition-colors"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="towing">Towing Services</option>
+                    <option value="roadside">Roadside Assistance</option>
+                    <option value="emergency">Emergency Towing</option>
+                    <option value="battery">Battery Jump Start</option>
+                    <option value="tire">Tire Change</option>
+                    <option value="lockout">Lockout Service</option>
                   </select>
+                  {form.formState.errors.service && (
+                    <p className="text-destructive text-sm mt-1">{form.formState.errors.service.message}</p>
+                  )}
                 </div>
-                <Button variant="hero" size="lg" className="w-full mt-4">
-                  Submit Request
+                <Button type="submit" variant="hero" size="lg" className="w-full mt-4" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               </form>
             </div>
