@@ -118,7 +118,7 @@ const Index = () => {
                   ].map((item, index) => (
                     <div 
                       key={index}
-                      className="flex flex-col md:flex-row items-center gap-1 md:gap-2 px-2 py-1.5 md:px-3 md:py-2 rounded-lg bg-white/10 border border-white/20 animate-fade-in"
+                      className="flex flex-col md:flex-row items-center gap-1 md:gap-2 px-2 py-1.5 md:px-3 md:py-2 rounded-lg bg-primary/20 border border-primary/50 animate-fade-in"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <item.icon className="h-4 w-4 text-primary shrink-0" />
