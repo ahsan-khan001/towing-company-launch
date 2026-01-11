@@ -52,11 +52,11 @@ const Index = () => {
     }
   });
 
-  const onSubmit = async (data: ServiceRequestForm) => {
+  const onSubmit = async (_data: ServiceRequestForm) => {
     setIsSubmitting(true);
     try {
-      // Simulate form submission - replace with actual API call when backend is connected
-      console.log("Form submitted:", data);
+      // TODO: Connect to backend API to process form submissions
+      // Server-side validation should mirror the Zod schema above
       await new Promise(resolve => setTimeout(resolve, 1000));
       toast.success("Service request submitted! We'll contact you shortly.");
       form.reset();
