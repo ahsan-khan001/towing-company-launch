@@ -85,8 +85,8 @@ const Index = () => {
           <div className="flex items-center gap-3">
             <img 
               src={logo} 
-              alt="Sky Auto and Towing" 
-              className="h-12 md:h-14 w-12 md:w-14 object-contain rounded-full" 
+              alt="TowOnTruck" 
+              className="h-16 md:h-20 w-auto object-contain" 
             />
           </div>
           
@@ -483,8 +483,8 @@ const Index = () => {
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
-                alt="Sky Auto and Towing" 
-                className="h-10 w-10 object-contain rounded-full" 
+                alt="TowOnTruck" 
+                className="h-16 md:h-20 w-auto object-contain" 
               />
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-foreground">SkyAuto and Towing</span>
