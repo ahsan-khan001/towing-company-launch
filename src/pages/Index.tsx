@@ -90,11 +90,31 @@ const Index = () => {
             />
           </div>
           
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors font-medium">Services</a>
-            <a href="#gallery" className="text-muted-foreground hover:text-primary transition-colors font-medium">Gallery</a>
-            <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">Contact</a>
+          <div className="hidden md:flex items-center gap-2">
+            <a 
+              href="#services" 
+              className="relative px-4 py-2 text-foreground font-semibold text-sm uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+            >
+              Services
+            </a>
+            <a 
+              href="#gallery" 
+              className="relative px-4 py-2 text-foreground font-semibold text-sm uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+            >
+              Gallery
+            </a>
+            <a 
+              href="#about" 
+              className="relative px-4 py-2 text-foreground font-semibold text-sm uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+            >
+              About
+            </a>
+            <a 
+              href="#contact" 
+              className="relative px-4 py-2 text-foreground font-semibold text-sm uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+            >
+              Contact
+            </a>
           </div>
           
           <a href="tel:2894891024" className="hidden sm:flex">
