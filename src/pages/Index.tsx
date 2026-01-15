@@ -86,7 +86,7 @@ const Index = () => {
             <img 
               src={logo} 
               alt="TowOnTruck" 
-              className="h-20 md:h-24 w-auto object-contain" 
+              className="h-16 md:h-20 w-auto object-contain rounded-xl" 
             />
           </div>
           
@@ -504,7 +504,7 @@ const Index = () => {
               <img 
                 src={logo} 
                 alt="TowOnTruck" 
-                className="h-20 md:h-24 w-auto object-contain" 
+                className="h-16 md:h-20 w-auto object-contain rounded-xl" 
               />
               <div className="flex flex-col">
                 <span className="font-display text-lg font-bold text-foreground">SkyAuto and Towing</span>
