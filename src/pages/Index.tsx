@@ -82,17 +82,15 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Top Banner Logo */}
       <div className="sticky top-0 z-50 w-full bg-white border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <img 
-            src={bannerLogo} 
-            alt="TowOnTruck Banner" 
-            className="h-20 md:h-28 w-auto mx-auto object-contain"
-          />
-        </div>
+        <img 
+          src={bannerLogo} 
+          alt="TowOnTruck Banner" 
+          className="w-full h-auto object-cover"
+        />
       </div>
 
       {/* Navigation */}
-      <nav className="sticky top-[104px] md:top-[128px] z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <nav className="sticky top-[60px] sm:top-[80px] md:top-[100px] lg:top-[120px] z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
