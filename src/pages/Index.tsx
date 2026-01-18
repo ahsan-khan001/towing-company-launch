@@ -80,8 +80,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Top Banner Logo */}
+      <div className="w-full bg-white py-4 border-b border-border">
+        <div className="container mx-auto px-4">
+          <img 
+            src={bannerLogo} 
+            alt="TowOnTruck Banner" 
+            className="w-full max-w-4xl h-auto mx-auto object-contain"
+          />
+        </div>
+      </div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <nav className="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
@@ -153,25 +164,12 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24 pb-8">
+      <section className="relative min-h-[80vh] flex flex-col justify-between overflow-hidden pb-8">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
           style={{ backgroundImage: `url(${truck1})` }}
         />
         <div className="absolute inset-0 bg-background/30" />
-        
-        {/* Banner Logo */}
-        <div className="relative z-10 pt-8 md:pt-12">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-center">
-              <img 
-                src={bannerLogo} 
-                alt="TowOnTruck Banner" 
-                className="w-full max-w-4xl h-auto object-contain drop-shadow-2xl animate-fade-in"
-              />
-            </div>
-          </div>
-        </div>
         
         {/* Spacer to push content to bottom */}
         <div className="flex-1" />
