@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { Phone, Clock, Shield, Truck, MapPin, Wrench, Car, Zap, ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import bannerLogo from "@/assets/banner-logo.png";
 import truck1 from "@/assets/truck-1.jpg";
 import truck2 from "@/assets/truck-2.jpg";
 import truck3 from "@/assets/truck-3.jpg";
@@ -158,6 +159,19 @@ const Index = () => {
           style={{ backgroundImage: `url(${truck1})` }}
         />
         <div className="absolute inset-0 bg-background/30" />
+        
+        {/* Banner Logo */}
+        <div className="relative z-10 pt-8 md:pt-12">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-center">
+              <img 
+                src={bannerLogo} 
+                alt="TowOnTruck Banner" 
+                className="w-full max-w-4xl h-auto object-contain drop-shadow-2xl animate-fade-in"
+              />
+            </div>
+          </div>
+        </div>
         
         {/* Spacer to push content to bottom */}
         <div className="flex-1" />
