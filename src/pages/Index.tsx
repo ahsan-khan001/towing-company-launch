@@ -82,7 +82,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 py-0 flex items-center justify-between">
+        <div className="container mx-auto px-0 py-0 flex items-center justify-between">
           <div className="flex items-center">
             <img 
               src={bannerLogo} 
