@@ -87,7 +87,7 @@ const Index = () => {
             <img 
               src={bannerLogo} 
               alt="TowOnTruck" 
-              className="h-28 md:h-36 w-auto object-contain" 
+              className="h-32 md:h-44 w-auto object-contain" 
             />
           </div>
           
