@@ -83,11 +83,11 @@ const Index = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-0 py-0 flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center overflow-hidden">
             <img 
               src={bannerLogo} 
               alt="TowOnTruck" 
-              className="h-12 md:h-16 w-auto object-contain" 
+              className="h-32 md:h-44 w-auto object-contain -my-10 md:-my-14" 
             />
           </div>
           
